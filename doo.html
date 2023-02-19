@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Game Doo Dashboard</title>
+    <style>
+
+      #body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      #header {
+        background-color: #1f1f1f;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+      }
+      #header h1 {
+        margin: 0;
+      }
+      #menu {
+        background-color: #f2f2f2;
+        border-right: 1px solid #ccc;
+        float: left;
+        height: calc(100vh - 50px);
+        padding: 10px;
+        width: 200px;
+      }
+      #content {
+        float: left;
+        height: calc(100vh - 50px);
+        padding: 10px;
+        width: calc(100% - 200px);
+      }
+      #menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      #menu li {
+        margin-bottom: 10px;
+      }
+      #menu a {
+        color: #333;
+        display: block;
+        text-decoration: none;
+      }
+      #menu a:hover {
+        color: #1f1f1f;
+      }
+	  #ji{
+	  position: absolute;
+      width: 117px;
+      height: 21px;
+      left: 307px;
+      top: 39px;
+
+     font-family: 'Inter';
+     font-style: normal;
+     font-weight: 400;
+     font-size: 14px;
+     line-height: 29px;
+     /* or 207% */
+
+     display: flex;
+      align-items: center;
+
+      color: #B5B7CA;
+
+
+	     
+
+	     
+	  
+	  
+	  }
+	  #jis{
+	  position: absolute;
+      width: 152px;
+      height: 42px;
+      left: 32px;
+      top:15px;
+
+
+
+	  }
+	  #para{
+	  position: absolute;
+width: 723px;
+height: 271px;
+left: 285px;
+top: 117px;
+
+background: #4B0ACE;
+border-radius: 20px;
+
+
+
+	  }
+	  #gr{
+	  position: absolute;
+width: 242px;
+height: 242px;
+left: 711px;
+top: 132px;
+
+background: url(rocket 3D transparent.png);
+	  }
+	  #asset{
+	  position: absolute;
+width: 182px;
+height: 52px;
+left: 321px;
+top: 300px;
+
+background: #FFA910;
+border-radius: 15px;
+
+
+
+	  
+	  }
+	  #db{
+	  position: absolute;
+width: 370px;
+height: 878px;
+left: 1035px;
+top: 117px;
+
+background: #301C57;
+border-radius: 20px;
+	  
+	  }
+	  #gy{position: absolute;
+width: 162px;
+height: 23px;
+left: 285px;
+top: 426px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+display: flex;
+align-items: center;
+
+color: #21202B;
+	  
+	  }
+	  #vy{
+	  position: absolute;
+width: 225px;
+height: 255px;
+left: 294px;
+top: 470px;
+
+background: #301C57;
+border-radius: 15px;
+
+	  }
+	  #vs{
+	  position: absolute;
+width: 225px;
+height: 255px;
+left: 534px;
+top: 470px;
+
+background: #FAFBFC;
+border-radius: 15px;
+	  }
+	  
+	  #vm{
+	  position: absolute;
+width: 225px;
+height: 255px;
+left: 774px;
+top: 470px;
+
+background: #FAFBFC;
+border-radius: 15px;
+	  }
+	  #vn{
+	  position: absolute;
+width: 225px;
+height: 255px;
+left: 294px;
+top: 740px;
+
+background: #FAFBFC;
+border-radius: 15px;
+	  }
+	  #vk{
+	  position: absolute;
+width: 225px;
+height: 255px;
+left: 533px;
+top: 740px;
+
+background: #FAFBFC;
+border-radius: 15px;
+	  }
+	  #vl{
+	  position: absolute;
+width: 225px;
+height: 255px;
+left: 774px;
+top: 740px;
+
+background: #FAFBFC;
+border-radius: 15px;
+	  }
+	  #sk{
+	  position: absolute;
+width: 51px;
+height: 9px;
+left: 446px;
+top: 685px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 10px;
+line-height: 29px;
+
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+
+	  }
+	  #wl{
+	  position: absolute;
+width: 210px;
+height: 47px;
+left: 20px;
+top: 956px;
+
+background: #FAFBFC;
+border-radius: 20px;
+	  }
+	  #fg{
+	  position: absolute;
+width: 87px;
+height: 57px;
+left: 1356px;
+top: 06px;
+
+background: url(image.png);
+	  
+	  }
+	  #rd{
+	  
+position: absolute;
+width: 26px;
+height: 26px;
+left: 1058px;
+top: 933px;
+	  }
+	  #mk{
+	  position: absolute;
+width: 26px;
+height: 26px;
+left: 1204px;
+top: 933px;
+	  }
+	  
+	  
+      #active {
+        background-color: #ccc;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+	
+      <h1>* </h1>
+	  
+    </div>
+	<div id="ji">
+	
+	<label  style=" float:center" ;for="fname"><b>SearchGame</b>
+	</label>
+	
+	<input type="text" name="fname"</br>
+	<button onclick="alert('Redirecting')">submit</button>
+	<a href="https://poki.com/en/popular-games">After_submiting_click_here</a>
+	
+	
+	
+	
+	</div>
+	<div id="jis">
+	<img src="logo.png">
+	</div>
+	
+    <div id="menu">
+	<label  style=" float:center" ;for="fname"><b>Search Dashboard</b>
+	<a href="https://newzoo.com/insights/rankings/top-20-pc-games">for_more_games_submit_here</a>
+	</label>
+	<input type="text" name="fname"</br>
+      <ul>
+	     <li><a href="https://www.google.com/search?q=plays+store&rlz=1C1CHBF_enIN837IN837&oq=plays+store&aqs=chrome..69i57.13534j0j7&sourceid=chrome&ie=UTF-8" id="active">Dashboard</a></li>
+        <li><a href="https://play.google.com/store/apps">Game store</a></li>
+        <li><a href="https://play.google.com/store/movies">Live stream Tv</a></li>
+        <li><a href="https://play.google.com/store/movies/stream/promotion_collections_movie_studios">Teams memeber</a></li>
+        <li><a href="https://play.google.com/store/books">Badges</a></li>
+		<li><a href="https://play.google.com/store/apps/category/FAMILY">My Library</a></li>
+		<li><a href="https://dir.indiamart.com/impcat/trophies.html">Trophies</a></li>
+      </ul>
+	  
+    </div>
+	
+	<div id="para">
+	<h2>3d game assets store & free<h2>
+	<p>High quality prmium & 3D-game assets<p>
+	</div>
+	<div id="gr">
+	<img src="D:\DOWNLOADS\rocket 3D transparent 1.png">
+	
+	</div>
+	<div id="asset">
+	<a href="https://www.getspeedyresults.com/web?q=free%20game%20downloads&o=1672096&akid=1000000913gsr146059664376kwd-11938531&gclid=Cj0KCQiArsefBhCbARIsAP98hXTd21pxhxSx5CDFfvWpBtD-SE8ykuhXTkpzEy7sWAbGXo39VeVmY10aAtx9EALw_wcB&ueid=562d3995-cebf-4d91-ac9d-855123967323&qo=semQuery&ad=semA&ag=fw&an=google_s">Dounload assets</a>
+	<img src="D:\DOWNLOADS\Shape (1).png" width="20" height="20">
+	</div>
+	<div id="db">
+	
+	
+	
+	
+	<img src="file:///D:/DOWNLOADS/SideBar%20Thumbnailthumbnail.svg" width="370" height="200">
+	
+	<pre>Nocturnal</pre>
+	<pre>
+KeyCars is a free (multiplayer only) game where each
+ player can play using a single key on a keyboard. 
+ Press a key to join, then hold that key to turn the
+ vehicle.Clash into players, shoot projectiles or 
+ trick them into driving off the ledge…KeyCars is a 
+ free (multiplayer only)game where each player can
+ play usinga single key on a keyboard. Press a key 
+ to join, then hold that key to turn the vehicle. 
+ Clash into players, shoot projectiles trick them 
+ into drivingoff the ledge…KeyCars is a free
+ (multiplayer only)game where each player can play 
+ usinga single key on a keyboard. Press a key to 
+ join,then holdthat key to turn the vehicle. Clash
+ into players, shoot projectiles or trick them into
+ driving off the ledge…KeyCars is a free 
+ (multiplayer only)game where each player can play 
+ using a single keyon a keyboard. Press a key join,
+ then hold thatkey to turn the vehicle.Clash into
+ players, shoot projectiles or trick them into 
+ driving off theledge…KeyCars is a free 
+ (multiplayer only)game where each player can play 
+ using a single key onakeyboard. Press a key to join
+ then hold that keyto turn the vehicle.Clash into 
+ players,shoot projectiles or trickthem intodriving 
+ off the ledge…</pre>
+	
+	</div>
+	
+	<div id="gy">
+	<pre>popular games-></pre>
+	
+	
+	</div>
+	<div id="vy">
+	<p>Nocturnal</p>
+	<img src="file:///D:/DOWNLOADS/SideBar%20Thumbnailthumbnail.svg" width="220" height="160">
+	<pre>Its your last night shift as a
+	forklift operator at…</pre>
+	
+	
+	</div>
+	
+	
+	<div id="vs">
+	<p>Nocturnal</p>
+	<img src="file:///D:/DOWNLOADS/SideBar%20Thumbnailthumbnail.svg" width="220" height="160">
+	<pre>Its your last night shift as a 
+	forklift operator at…</pre>
+	</div>
+	
+	
+	<div id="vm">
+	<p>Nocturnal</p>
+	<img src="file:///D:/DOWNLOADS/SideBar%20Thumbnailthumbnail.svg" width="220" height="160">
+	<pre>Its your last night shift as a 
+	forklift operator at…</pre>
+	
+	
+	</div>
+	<div id="vn">
+	<p>Nocturnal</p>
+	<img src="file:///D:/DOWNLOADS/SideBar%20Thumbnailthumbnail.svg" width="220" height="160">
+	<pre>Its your last night shift as a
+	forklift operator at…</pre>
+	</div>
+	
+	
+	<div id="vk">
+	<p>Nocturnal</p>
+	<img src="file:///D:/DOWNLOADS/SideBar%20Thumbnailthumbnail.svg" width="220" height="160">
+	<pre>Its your last night shift as a
+	forklift operator at…</pre>
+	</div>
+	
+	
+	<div id="vl">
+	<p>Nocturnal</p>
+	<img src="file:///D:/DOWNLOADS/SideBar%20Thumbnailthumbnail.svg" width="220" height="160">
+	<pre>Its your last night shift as a
+	forklift operator at…</pre>
+	</div>
+	
+	<div id="sk">
+	<a href="https://play.google.com/store/apps/details?id=com.imangi.templerun2&hl=en&gl=US">Dounload</a>
+	</div>
+	
+	
+	<div id="wl">
+	<button onclick="alert('You have been logged out')">-->>>LOG_OUT</button>
+	</div>
+	
+	<div id="fg">
+	
+	</div>
+	<div id="rd">
+	
+	<img src="D:\DOWNLOADS\Replace Your Image.png">
+	<pre>8.2</pre>
+	<label  style=for="fname" width="200px" height="1000px"><b>EnteryourComment</b>
+	</label>
+	
+	<input type="text" name="fname"</br>
+	<button onclick="alert('Feedback completed')">submit</button>
+	
+	</div>
+<div id ="mk">
+
+<img src="D:\DOWNLOADS\Replace Your Image (1).png">
+<pre>12</pre>
+</div>
+	
+    <div id="content">
+      
+    </div>
+  </body>
+</html>
